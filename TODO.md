@@ -1,0 +1,2 @@
+- [x] Remove mr-16 from download button div in Hero.jsx to move it further right
+- [ ] Apply fontFamily: "'Inter', 'Graphik', sans-serif" to the full hero section in Hero.jsx
