@@ -28,15 +28,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      # 5️⃣ Add CNAME for custom domain (no www)
-      - name: Add CNAME for custom domain
+      # 5️⃣ Add CNAME for custom domain
+      - name: Add CNAME
         run: echo "nofault.in" > dist/CNAME
 
       # 6️⃣ Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages        # branch to deploy to
-          folder: dist            # Vite build folder
+          branch: gh-pages      # deploy branch
+          folder: dist          # build folder
           clean: true
           commit-message: "Deploy React + Vite to GitHub Pages"
