@@ -3,14 +3,14 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger workflow on push to main branch
+      - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repository
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -24,19 +24,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Build the project
+      # 4️⃣ Build project
       - name: Build
         run: npm run build
 
-      # 5️⃣ Deploy to GitHub Pages
+      # 5️⃣ Add CNAME for custom domain (no www)
+      - name: Add CNAME for custom domain
+        run: echo "nofault.in" > dist/CNAME
+
+      # 6️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages           # The branch to deploy to
-          folder: dist               # The build output folder (Vite default is `dist`)
-          clean: true                # Remove old files in gh-pages branch
+          branch: gh-pages        # branch to deploy to
+          folder: dist            # Vite build folder
+          clean: true
           commit-message: "Deploy React + Vite to GitHub Pages"
-
-      # 6️⃣ Set custom domain (optional)
-      - name: Add CNAME for custom domain
-        run: echo "nofault.in" > dist/CNAME
