@@ -45,11 +45,12 @@ const ContactUs = () => {
       link: "tel:+918077719863",
     },
     {
-      label: "WhatsApp",
-      value: "+91 7409275180",
-      icon: <MessageCircle className="w-6 h-6 text-green-500" />,
-      link: "https://wa.me/917409275180",
-    },
+  label: "WhatsApp",
+  value: "+91 7409275180",
+  icon: <MessageCircle className="w-6 h-6 text-green-500" />,
+  link: "https://wa.me/917409275180",
+}
+,
   ];
 
   return (
