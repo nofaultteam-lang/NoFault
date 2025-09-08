@@ -46,7 +46,7 @@ const ContactUs = () => {
     },
     {
       label: "WhatsApp",
-      value: "+91 8077719863",
+      value: "+91 7409275180",
       icon: <MessageCircle className="w-6 h-6 text-green-500" />,
       link: "https://wa.me/918077719863",
     },
