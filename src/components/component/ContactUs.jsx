@@ -40,9 +40,9 @@ const ContactUs = () => {
     },
     {
       label: "Phone",
-      value: "+91 8077719863",
+      value: "+91 7983275180",
       icon: <Phone className="w-6 h-6 text-blue-600" />,
-      link: "tel:+918077719863",
+      link: "tel:+917983275180",
     },
     {
   label: "WhatsApp",
